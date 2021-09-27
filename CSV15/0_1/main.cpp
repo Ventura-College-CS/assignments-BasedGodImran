@@ -1,4 +1,4 @@
-// Your First C++ Program
+// My First Program
 
 #include <iostream>
 
