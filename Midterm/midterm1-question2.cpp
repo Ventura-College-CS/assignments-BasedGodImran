@@ -103,10 +103,26 @@ Student s4(4,"Kendall",scores4, 5);
 double *scores5 = new double[5]{64.5, 22.4, 95.5, 45.1, 15.2};
 Student s5(5,"Roman",scores5, 5);
 
+pq.push(s1);
+pq.push(s2);
+pq.push(s3);
+pq.push(s4);
+pq.push(s5);
+
+for (int i = 0; i < 5; i++)
+{
+
 
 
 }
 
+Student s = pq.top();
+s.display();
+pq.pop();
+cout<< endl;
 
+}
+
+return 0;
 
 }
