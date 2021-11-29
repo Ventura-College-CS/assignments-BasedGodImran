@@ -60,8 +60,34 @@ T pop()
 T res = pool[pool.size()-1];
 pool.pop_back();
 return res;
+}
+
+T topEl()
+{
+
+return pool[pool.size() - 1];
+
 
 }
+bool isEmpty()
+{
+
+return pool.size() == 0;
+
+
+}
+int size() {return pool.size();}
+
+};
+
+int main()
+{
+
+    Student s1(100, "John" new double [3]{10,20,30});
+    
+
+
+
 
 }
 
