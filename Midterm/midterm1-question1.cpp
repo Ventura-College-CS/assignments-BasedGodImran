@@ -40,8 +40,7 @@ class Stack
 
 {
     private:
-
-    vector<T> pool;
+     vector<T>pool;
 
 public:
 Stack()
