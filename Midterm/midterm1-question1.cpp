@@ -28,7 +28,42 @@ Student (int i, string name, double *sc)
     
 
 }
+int getID(){ return SID; }
 
+string getName() {return SName;}
+
+double *getScores() { return scores; }
+};
+
+template <class T>
+class Stack
+
+{
+    private:
+
+    vector<T> pool;
+
+public:
+Stack()
+{
+
+}
+void push(const T &el)
+{
+
+pool.push_back(el);
+
+}
+T pop()
+{
+
+T res = pool[pool.size()-1];
+pool.pop_back();
+return res;
+
+}
+
+}
 
 
 
