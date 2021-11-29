@@ -37,6 +37,33 @@ int getID() { return SID; }
 string getName() { return SName; }
 double *getScores() { return scores}
 
+double getSum()
+{
+
+double sum = 0;
+for (int i = 0; i < numScores; i++)
+{
+
+sum+= scores[i];
+
+}
+
+return sum;
+}
+
+void display()
+{
+    cout << "ID:" << getID()<< " "
+    << "Name: " << getName() << " " 
+    << "Scores: ";
+    for (int i = 0; i < numScores; i++)
+    {
+
+        cout << scores[i] << getSum();
+
+    }
+}:
+
 
 
 }
