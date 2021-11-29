@@ -90,10 +90,27 @@ int main()
     Student s5(104, "Roman", new double[3]{130,140,150});
 
 Stack<Student>st;
+st.push(s1);
+st.push(s2);
+st.push(s3);
+st.push(s4);
+st.push(s5);
+cout<<"Size: " << st.size() << endl;
+
+while (!st.isEmpty())
+{
 
 
 }
 
+Student res = st.pop();
+cout << "Sid: " << res.getID() << " , SName: " << res.getName() << " , scores: ";
+cout << res.getScores()[0] << " , " << res.getScores()[1] << " , " << res.getScores()[2] << endl;
 
+
+
+}
+
+return 0;
 
 }
