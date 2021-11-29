@@ -62,7 +62,32 @@ void display()
         cout << scores[i] << getSum();
 
     }
+    cout << "Score Sum: " << getSum();
+}
 }:
+
+class StudentCompare
+{
+    public:
+    bool operator()(Student s1, Student s2)
+    {
+
+        return s1.getSum() < s2.getSum();
+
+    }
+
+
+}:
+
+int main()
+{
+
+priority_queue<Student, vector<Student>, StudentCompare> pq;
+double *scores1 = new double[5]{34.5, 22.4, 65.5, 45.5, 55.2};
+Student s1(1,"John",scores1, 5);
+
+
+}
 
 
 
