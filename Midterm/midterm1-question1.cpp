@@ -84,9 +84,12 @@ int main()
 {
 
     Student s1(100, "John" new double [3]{10,20,30});
-    
+    Student s2(101, "Tom", new double[3]{40,50,60});
+    Student s3(102, "Greg", new double[3]{70,80,90});
+    Student s4(103, "Kendall", new double[3]{100,110,120});
+    Student s5(104, "Roman", new double[3]{130,140,150});
 
-
+Stack<Student>st;
 
 
 }
