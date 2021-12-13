@@ -51,3 +51,28 @@ int main() {
     return 0;
 }
 
+
+void quick_sort(Course *courses, int l, int h) {
+
+    if (l >= h) return;
+    int i = l - 1;
+    int j = h + 1;
+    Course course = courses[(l + h) / 2];
+
+   
+    while (i < j) {
+        
+        while (courses[++i].getId() < course.getId());
+        while (courses[--j].getId() > course.getId());
+        if (i < j) {
+    
+            Course temp = courses[i];
+            courses[i] = courses[j];
+            courses[j] = temp;
+        }
+    }
+  
+    quick_sort(courses, l, i);
+    quick_sort(courses, i + 1, h);
+}
+
