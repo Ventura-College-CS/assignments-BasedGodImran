@@ -38,3 +38,16 @@ int main() {
         Course c(id, name, credit);
         courses[n++] = c;
     }
+
+   
+    data_file.close();
+
+    for (int p = 0; p < n; p++) {
+        for (int q = 0; q < n - p - 1; q++) {
+            if (courses[q].getId() > courses[q + 1].getId()) {
+                Course c = courses[q];
+                courses[q] = courses[q + 1];
+                courses[q + 1] = c;
+            }
+        }
+    }
