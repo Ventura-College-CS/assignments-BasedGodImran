@@ -1,4 +1,4 @@
-// still going..
+// All good!
 
 #include "Course.h"
 

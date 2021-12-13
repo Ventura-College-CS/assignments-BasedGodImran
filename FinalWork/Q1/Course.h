@@ -1,4 +1,4 @@
-//Changes to be made
+// All good!
 #ifndef COURSE_H
 #define COURSE_H
 #include <iostream>

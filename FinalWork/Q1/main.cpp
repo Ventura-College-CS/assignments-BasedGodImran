@@ -1,4 +1,4 @@
-// still on this 
+// Just about there
 
 #include <iostream>
 #include <fstream>
@@ -74,3 +74,45 @@ int main() {
     }
 
     return 0;
+
+    }
+
+int binary_search(Course *courses, int n, int search_id) {
+ 
+    int l = 0;
+    int r = n - 1;
+
+    while (l <= r) {
+
+        int mid = l + (r - l) / 2;
+        if (courses[mid].getId() == search_id) {
+            return mid;
+        }
+        if (courses[mid].getId() < search_id) {
+            l = mid + 1;
+        } else {
+            r = mid - 1;
+        }
+    }
+    
+    return -1;
+}
+
+
+int recursive_binary_search(Course *courses, int l, int r, int search_id) {
+
+    while (l <= r) {
+        
+        int mid = l + (r - l) / 2;
+        if (courses[mid].getId() == search_id) {
+            return mid;
+        }
+        if (courses[mid].getId() < search_id) {
+            return recursive_binary_search(courses, mid + 1, r, search_id);
+        } else {
+            return recursive_binary_search(courses, l, mid - 1, search_id);
+        }
+    }
+    
+    return -1;
+}

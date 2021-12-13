@@ -1,1 +1,53 @@
-//File changing
+#include <iostream>
+#include <fstream>
+#include "Course.h"
+
+using namespace std;
+void quick_sort(Course *, int, int);
+
+int main() {
+
+    ifstream data_file("input_data.txt");
+
+    if (data_file.fail()) {
+       
+        cout << "Error!!! Failed to open input_data.txt file..." << endl;
+        cout << "Make sure input_data.txt file is present in the current working directory." << endl;
+        return 1;
+    }
+
+    Course courses[10];
+    int n = 0;
+
+    
+    while (!data_file.eof()) {
+        int id, credit;
+        string name;
+
+
+        data_file >> id;
+        data_file >> name;
+        data_file >> credit;
+        Course c(id, name, credit);
+
+        courses[n++] = c;
+    }
+
+  
+    data_file.close();
+
+    cout << "ARRAY BEFORE SORTING:" << endl;
+    for (int i = 0; i < n; i++) {
+        courses[i].print();
+    }
+
+
+    quick_sort(courses, 0, n - 1);
+    cout << "\nARRAY AFTER PERFORMING QUICK SORTING:" << endl;
+    for (int i = 0; i < n; i++) {
+        courses[i].print();
+    }
+
+    return 0;
+}
+
